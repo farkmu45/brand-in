@@ -1,8 +1,8 @@
 import Root from '@/layouts/Root'
-import Branding from '@pages/branding/Branding'
-import Home from '@pages/home/Home'
-import Promote from '@pages/promote/Promote'
-import Webinars from '@pages/webinars/Webinars'
+import Branding from '@/pages/branding/Branding'
+import Home from '@/pages/home/Home'
+import Promote from '@/pages/promote/Promote'
+import Webinars from '@/pages/webinars/Webinars'
 import { RouteObject } from 'react-router-dom'
 
 
