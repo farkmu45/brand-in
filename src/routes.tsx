@@ -1,4 +1,4 @@
-import Root from '@/layouts/Root'
+import Root from '@/layouts/root'
 import Branding from '@/pages/branding'
 import Home from '@/pages/home'
 import Promote from '@/pages/promote'
