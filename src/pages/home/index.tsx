@@ -1,5 +1,5 @@
 import HeroURL from '@/assets/images/home/hero.webp'
-import FeatureCard from './featureCard'
+import FeatureCard from './feature-card'
 
 export default function Home() {
   return (
