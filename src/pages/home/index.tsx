@@ -1,3 +1,6 @@
+import Feature1URL from '@/assets/images/home/feature-1.png'
+import Feature2URL from '@/assets/images/home/feature-2.png'
+import Feature3URL from '@/assets/images/home/feature-3.png'
 import HeroURL from '@/assets/images/home/hero.webp'
 import FeatureCard from './feature-card'
 
@@ -38,22 +41,19 @@ export default function Home() {
 
       <div className='mt-10 grid gap-y-10 md:grid-cols-3 md:gap-x-10'>
         <FeatureCard
-          className='bg-primary-500 text-white'
           name='Order dengan Mudah'
           description='Anda hanya perlu menginstall aplikasi Brand-in dan mencari barang atau jasa yang anda butuhkan'
-          image={HeroURL}
+          image={Feature1URL}
         />
         <FeatureCard
-          className='bg-white'
-          name='Order dengan Mudah'
-          description='Anda hanya perlu menginstall aplikasi Brand-in dan mencari barang atau jasa yang anda butuhkan'
-          image={HeroURL}
+          name='Cari Produk dan Jasa dengan Mudah'
+          description='Kami bekerjasama dengan berbagai mitra bisnis produk dan jasa'
+          image={Feature2URL}
         />
         <FeatureCard
-        className='bg-primary-500 text-white'
-          name='Order dengan Mudah'
-          description='Anda hanya perlu menginstall aplikasi Brand-in dan mencari barang atau jasa yang anda butuhkan'
-          image={HeroURL}
+          name='Promosikan bisnis anda'
+          description='Anda bisa mempromosikan bisnis secara gratis melalui platform kami'
+          image={Feature3URL}
         />
       </div>
     </div>

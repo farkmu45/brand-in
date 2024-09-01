@@ -1,32 +1,27 @@
-import { cn } from '@/lib/utils'
 
 interface FeatureCardProps {
   name: string
   description: string
   image: string
-  className?: string
 }
 
 export default function FeatureCard({
   name,
   description,
   image,
-  className,
 }: FeatureCardProps) {
   return (
     <div
-      className={cn(
-        'bg-slate-200 px-6 gap-y-3 py-8 text-center rounded-md flex flex-col items-center shadow-lg',
-        className
-      )}
+      className='border border-gray-200 px-6 gap-y-3 py-8 text-center rounded-lg flex flex-col items-center shadow-lg'
+        
     >
       <img
         src={image}
         className='max-w-[600px] w-full object-contain'
         alt='Hero image'
       />
-      <h5 className='font-semibold text-lg'>{name}</h5>
-      <p>{description}</p>
+      <h5 className='font-semibold text-lg text-slate-700'>{name}</h5>
+      <p className="text-gray-500">{description}</p>
     </div>
   )
 }
