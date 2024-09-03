@@ -1,3 +1,4 @@
+import CeoURL from '@/assets/images/home/ceo.webp'
 import Feature1URL from '@/assets/images/home/feature-1.png'
 import Feature2URL from '@/assets/images/home/feature-2.png'
 import Feature3URL from '@/assets/images/home/feature-3.png'
@@ -68,6 +69,28 @@ export default function Home() {
           Produk dan Jasa Yang Selalu Membuat Anda Jatuh Cinta
         </h3>
         <Partners />
+      </div>
+
+      {/* Message */}
+
+      <div className='grid md:grid-cols-2 items-center my-80 md:my-40 gap-x-20'>
+        <img
+          src={CeoURL}
+          className='hidden md:block w-full object-cover  max-w-[200px] mx-auto md:mx-0 md:max-w-[300px]'
+          alt='CEO image'
+        />
+        <div>
+          <h5 className='text-2xl font-bold text-primary-500'>
+            "Salah satu misi saya adalah membantu UMKM untuk transisi dari
+            tradisional menjadi UMKM yang bisa bersaing secara digital. Dalam
+            era globalisasi ini, transformasi digital menjadi kunci utama
+            kesuksesan bisnis."
+          </h5>
+          <p className='text-lg mt-20 font-semibold text-slate-700'>
+            Amir Faisal Karimullah
+          </p>
+          <p className='text-gray-500'>CEO Brand-in</p>
+        </div>
       </div>
     </div>
   )
