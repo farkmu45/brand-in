@@ -3,6 +3,7 @@ import Feature2URL from '@/assets/images/home/feature-2.png'
 import Feature3URL from '@/assets/images/home/feature-3.png'
 import HeroURL from '@/assets/images/home/hero.webp'
 import FeatureCard from './feature-card'
+import Partners from './partners'
 
 export default function Home() {
   return (
@@ -55,6 +56,18 @@ export default function Home() {
           description='Anda bisa mempromosikan bisnis secara gratis melalui platform kami'
           image={Feature3URL}
         />
+      </div>
+
+      {/* Partners */}
+
+      <div className='bg-primary-100 my-20 px-8 flex flex-col items-center md:items-start py-10 rounded-lg'>
+        <h3 className='text-primary-500 font-semibold uppercase'>
+          Beberapa Mitra Kami
+        </h3>
+        <h3 className='text-lg font-semibold text-center md:text-start'>
+          Produk dan Jasa Yang Selalu Membuat Anda Jatuh Cinta
+        </h3>
+        <Partners />
       </div>
     </div>
   )
