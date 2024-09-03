@@ -3,6 +3,7 @@ import Feature1URL from '@/assets/images/home/feature-1.png'
 import Feature2URL from '@/assets/images/home/feature-2.png'
 import Feature3URL from '@/assets/images/home/feature-3.png'
 import HeroURL from '@/assets/images/home/hero.webp'
+import { getAllPartnerLogos } from '@/lib/partner-utils'
 import FeatureCard from './feature-card'
 import Partners from './partners'
 
@@ -73,7 +74,7 @@ export default function Home() {
 
       {/* Message */}
 
-      <div className='grid md:grid-cols-2 items-center my-80 md:my-40 gap-x-20'>
+      <div className='grid md:grid-cols-2 items-center py-80 md:py-40 gap-x-20'>
         <img
           src={CeoURL}
           className='hidden md:block w-full object-cover  max-w-[200px] mx-auto md:mx-0 md:max-w-[300px]'
@@ -90,6 +91,24 @@ export default function Home() {
             Amir Faisal Karimullah
           </p>
           <p className='text-gray-500'>CEO Brand-in</p>
+        </div>
+      </div>
+
+      {/* Partners logo */}
+      <div className="py-28">
+        <h3 className='text-lg font-semibold text-center'>
+          Telah <span className='text-primary-500'>dipercaya</span> membantu
+          beberapa UMKM di Indonesia
+        </h3>
+        <div className='mt-10 grid md:grid-cols-3'>
+          {getAllPartnerLogos().map((partner) => (
+            <img
+              key={partner.name}
+              src={partner.logo}
+              className='h-72 w-full object-cover'
+              alt={`${partner.name} logo`}
+            />
+          ))}
         </div>
       </div>
     </div>

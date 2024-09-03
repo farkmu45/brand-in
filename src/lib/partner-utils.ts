@@ -8,6 +8,11 @@ interface PartnerAssets {
   images: string[]
 }
 
+interface PartnerLogo {
+  name: string;
+  logo: string;
+}
+
 export function getPartnerList(): Partner[] {
   const imageFiles = import.meta.glob(
     '/src/assets/images/home/partners/**/*.webp',
@@ -44,4 +49,22 @@ export function getPartnerAssets(folderName: string): PartnerAssets {
     .filter((path) => path.includes(folderName) && path.includes('image-'))
 
   return { images }
+}
+
+export function getAllPartnerLogos(): PartnerLogo[] {
+  const imageFiles = import.meta.glob('/src/assets/images/home/partners/**/*.webp', { eager: true }) as Record<string, unknown>;
+  
+  return Object.keys(imageFiles)
+    .filter(path => path.includes('logo.webp'))
+    .map(path => {
+      const pathParts = path.split('/');
+      const folderName = pathParts[pathParts.length - 2];
+      const name = folderName.split('-')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+      return {
+        name,
+        logo: path
+      };
+    });
 }
