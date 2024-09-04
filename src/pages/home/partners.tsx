@@ -16,22 +16,22 @@ export default function Partners() {
   const [selectedPartner, setSelectedPartner] = useState(partners[0])
 
   return (
-    <div className='grid gap-x-8 md:grid-cols-[250px_1fr] mt-14 w-full'>
-      <div className='flex md:flex-col gap-x-4 md:gap-x-0 justify-center md:justify-normal gap-y-4'>
+    <div className='grid gap-x-8 lg:grid-cols-[250px_1fr] mt-14 w-full'>
+      <div className='flex lg:flex-col gap-x-4 lg:gap-x-0 justify-center lg:justify-normal gap-y-4'>
         {partners.map((partner) => (
           <div
             key={partner.folderName}
             onClick={() => setSelectedPartner(partner)}
             className={cn(
-              'duration-300 cursor-pointer md:py-2 flex gap-x-2 items-center md:px-3 md:rounded-full',
+              'duration-300 cursor-pointer lg:py-2 flex gap-x-2 items-center lg:px-3 lg:rounded-full',
               partner.folderName === selectedPartner.folderName &&
-                'md:bg-primary-500'
+                'lg:bg-primary-500'
             )}
           >
             <img
               src={new URL(partner.logo, import.meta.url).href}
               className={cn(
-                'duration-300 h-14 w-14 object-cover rounded-full ring-2 md:ring-0 ring-offset-2 md:ring-offset-0',
+                'duration-300 h-14 w-14 object-cover rounded-full ring-2 lg:ring-0 ring-offset-2 lg:ring-offset-0',
                 partner.folderName === selectedPartner.folderName &&
                   'ring-primary-500'
               )}
@@ -39,7 +39,7 @@ export default function Partners() {
             />
             <p
               className={cn(
-                'hidden md:block text-primary-500 font-medium',
+                'hidden lg:block text-primary-500 font-medium',
                 partner.folderName === selectedPartner.folderName &&
                   'text-white'
               )}
@@ -50,8 +50,9 @@ export default function Partners() {
         ))}
       </div>
       <Carousel
-        className='mt-10 md:mt-0'
+        className='mt-10 lg:mt-0'
         opts={{
+          align: 'start',
           loop: true,
         }}
         plugins={[Autoplay({ delay: 4000 })]}
@@ -59,7 +60,7 @@ export default function Partners() {
         <CarouselContent>
           {getPartnerAssets(selectedPartner.folderName).images.map(
             (image, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem className='md:basis-1/2' key={index}>
                 <div
                   className='h-[500px] px-6 flex items-end rounded-lg py-3 bg-cover bg-center bg-no-repeat'
                   style={{
@@ -72,8 +73,8 @@ export default function Partners() {
             )
           )}
         </CarouselContent>
-        <CarouselPrevious className='left-4' />
-        <CarouselNext className='right-4' />
+        <CarouselPrevious className='left-4 hidden md:inline-flex' />
+        <CarouselNext className='right-4 hidden md:inline-flex' />
       </Carousel>
     </div>
   )
