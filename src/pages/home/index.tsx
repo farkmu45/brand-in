@@ -3,6 +3,7 @@ import Feature1URL from '@/assets/images/home/feature-1.png'
 import Feature2URL from '@/assets/images/home/feature-2.png'
 import Feature3URL from '@/assets/images/home/feature-3.png'
 import HeroURL from '@/assets/images/home/hero.webp'
+import Footer from '@/components/footer'
 import { getAllPartnerLogos } from '@/lib/partner-utils'
 import FeatureCard from './feature-card'
 import Partners from './partners'
@@ -95,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Partners logo */}
-      <div className="py-28">
+      <div className='py-28'>
         <h3 className='text-lg font-semibold text-center'>
           Telah <span className='text-primary-500'>dipercaya</span> membantu
           beberapa UMKM di Indonesia
@@ -111,6 +112,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }
