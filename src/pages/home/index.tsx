@@ -8,6 +8,7 @@ import Footer from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { getAllPartnerLogos } from '@/lib/partner-utils'
 import FeatureCard from './feature-card'
+import NewsCard from './news-card'
 import Partners from './partners'
 
 export default function Home() {
@@ -115,6 +116,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className='py-40'>
+        <h2 className='text-3xl font-semibold'>Berita terbaru</h2>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-8 mt-8'>
+          <NewsCard
+            imageUrl={HeroURL}
+            title='Important News Headline'
+            description='This is a brief description of the news article. lorem ipsum'
+            readMoreUrl='https://example.com/full-article'
+          />
+          <NewsCard
+            imageUrl={HeroURL}
+            title='Important News Headline'
+            description='This is a brief description of the news article. lorem ipsum'
+            readMoreUrl='https://example.com/full-article'
+          />
+          <NewsCard
+            imageUrl={HeroURL}
+            title='Important News Headline'
+            description='This is a brief description of the news article. lorem ipsum'
+            readMoreUrl='https://example.com/full-article'
+          />
+        </div>
+      </section>
+
       {/* Mobile App preview */}
       <section className='py-52 grid md:grid-cols-2 items-center'>
         <div>
@@ -128,11 +153,7 @@ export default function Home() {
             Bantu UMKM sekitar dengan aplikasi Brand-in Indonesia!
           </p>
 
-          <Button
-            title='Upload business'
-            className='bg-primary-500 rounded-full hover:bg-primary-500/95 mt-4'
-            asChild
-          >
+          <Button title='Upload business' className='mt-4' asChild>
             <a href='http://ukm.sixeyestech.com/admin/login' target='_blank'>
               Klik disini untuk upload bisnis
             </a>
