@@ -3,7 +3,9 @@ import Feature1URL from '@/assets/images/home/feature-1.png'
 import Feature2URL from '@/assets/images/home/feature-2.png'
 import Feature3URL from '@/assets/images/home/feature-3.png'
 import HeroURL from '@/assets/images/home/hero.webp'
+import MockupURL from '@/assets/images/home/mockup.png'
 import Footer from '@/components/footer'
+import { Button } from '@/components/ui/button'
 import { getAllPartnerLogos } from '@/lib/partner-utils'
 import FeatureCard from './feature-card'
 import Partners from './partners'
@@ -111,6 +113,30 @@ export default function Home() {
             />
           ))}
         </div>
+      </div>
+
+      {/* Mobile App preview */}
+      <div className='py-52 grid md:grid-cols-2 items-center'>
+        <div>
+          <h3 className='uppercase font-semibold text-primary-500'>
+            Download App
+          </h3>
+          <h3 className='text-lg font-semibold'>
+            Get Started With Brand-in Indonesia Today
+          </h3>
+          <p className='text-3xl font-semibold mt-10'>
+            Bantu UMKM sekitar dengan aplikasi Brand-in Indonesia!
+          </p>
+
+          <Button
+            title='Upload business'
+            className='bg-primary-500 rounded-full hover:bg-primary-500/95 mt-4'
+            asChild
+          >
+            <a href='http://ukm.sixeyestech.com/admin/login' target='_blank'>Klik disini untuk upload bisnis</a>
+          </Button>
+        </div>
+        <img src={MockupURL} alt='Mockup image' className='w-full max-w-[300px] object-contain mx-auto mt-20' />
       </div>
 
       <Footer />
