@@ -3,7 +3,7 @@ import { SiInstagram, SiWhatsapp } from '@icons-pack/react-simple-icons'
 
 export default function Footer() {
   return (
-    <div className='py-10'>
+    <footer className='py-10'>
       <div className='flex items-center gap-x-2'>
         <img src={Logo} alt='Brand-in Logo' className='h-10 w-10' />
         <p className='font-bold text-xl'>
@@ -23,6 +23,6 @@ export default function Footer() {
           <SiWhatsapp className='h-6 w-6 fill-primary-500' />
         </a>
       </div>
-    </div>
+    </footer>
   )
 }

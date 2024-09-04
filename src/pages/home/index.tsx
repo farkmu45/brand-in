@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className='max-w-7xl mx-auto px-4'>
       {/* Hero */}
-      <div className='mt-10 md:mt-0 grid md:grid-cols-2 md:items-center items-start'>
+      <section className='mt-10 md:mt-0 grid md:grid-cols-2 md:items-center items-start'>
         <div className='flex gap-y-6 flex-col items-start'>
           <p className='inline-block px-3 py-1 rounded-full bg-primary-100 font-semibold text-primary-600 text-xs'>
             Mudahkan Pencarian Bisnis di Sekitar Anda
@@ -34,7 +34,7 @@ export default function Home() {
           className='max-w-[600px] w-full object-contain justify-self-center md:justify-self-end'
           alt='Hero image'
         />
-      </div>
+      </section>
 
       {/* Features */}
       <h3 className='text-lg font-semibold text-center'>
@@ -65,7 +65,7 @@ export default function Home() {
 
       {/* Partners */}
 
-      <div className='bg-primary-100 my-20 px-8 flex flex-col items-center md:items-start py-10 rounded-lg'>
+      <section className='bg-primary-100 my-20 px-8 flex flex-col items-center md:items-start py-10 rounded-lg'>
         <h3 className='text-primary-500 font-semibold uppercase'>
           Beberapa Mitra Kami
         </h3>
@@ -73,11 +73,11 @@ export default function Home() {
           Produk dan Jasa Yang Selalu Membuat Anda Jatuh Cinta
         </h3>
         <Partners />
-      </div>
+      </section>
 
       {/* Message */}
 
-      <div className='grid md:grid-cols-2 items-center py-80 md:py-40 gap-x-20'>
+      <section className='grid md:grid-cols-2 items-center py-80 md:py-40 gap-x-20'>
         <img
           src={CeoURL}
           className='hidden md:block w-full object-cover  max-w-[200px] mx-auto md:mx-0 md:max-w-[300px]'
@@ -95,10 +95,10 @@ export default function Home() {
           </p>
           <p className='text-gray-500'>CEO Brand-in</p>
         </div>
-      </div>
+      </section>
 
       {/* Partners logo */}
-      <div className='py-28'>
+      <section className='py-28'>
         <h3 className='text-lg font-semibold text-center'>
           Telah <span className='text-primary-500'>dipercaya</span> membantu
           beberapa UMKM di Indonesia
@@ -113,10 +113,10 @@ export default function Home() {
             />
           ))}
         </div>
-      </div>
+      </section>
 
       {/* Mobile App preview */}
-      <div className='py-52 grid md:grid-cols-2 items-center'>
+      <section className='py-52 grid md:grid-cols-2 items-center'>
         <div>
           <h3 className='uppercase font-semibold text-primary-500'>
             Download App
@@ -133,11 +133,17 @@ export default function Home() {
             className='bg-primary-500 rounded-full hover:bg-primary-500/95 mt-4'
             asChild
           >
-            <a href='http://ukm.sixeyestech.com/admin/login' target='_blank'>Klik disini untuk upload bisnis</a>
+            <a href='http://ukm.sixeyestech.com/admin/login' target='_blank'>
+              Klik disini untuk upload bisnis
+            </a>
           </Button>
         </div>
-        <img src={MockupURL} alt='Mockup image' className='w-full max-w-[300px] object-contain mx-auto mt-20' />
-      </div>
+        <img
+          src={MockupURL}
+          alt='Mockup image'
+          className='w-full max-w-[300px] object-contain mx-auto mt-20'
+        />
+      </section>
 
       <Footer />
     </div>
