@@ -38,31 +38,32 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <h3 className='text-lg font-semibold text-center'>
-        <span className='text-primary-500 text-base uppercase'>
-          Apa yang kami sediakan
-        </span>
-        <br />
-        Untuk Kamu di Brand-In Indonesia
-      </h3>
-
-      <div className='mt-10 grid gap-y-10 md:grid-cols-3 md:gap-x-10'>
-        <FeatureCard
-          name='Order dengan Mudah'
-          description='Anda hanya perlu menginstall aplikasi Brand-in dan mencari barang atau jasa yang anda butuhkan'
-          image={Feature1URL}
-        />
-        <FeatureCard
-          name='Cari Produk dan Jasa dengan Mudah'
-          description='Kami bekerjasama dengan berbagai mitra bisnis produk dan jasa'
-          image={Feature2URL}
-        />
-        <FeatureCard
-          name='Promosikan bisnis anda'
-          description='Anda bisa mempromosikan bisnis secara gratis melalui platform kami'
-          image={Feature3URL}
-        />
-      </div>
+      <section className='py-40'>
+        <h3 className='text-lg font-semibold text-center'>
+          <span className='text-primary-500 text-base uppercase'>
+            Apa yang kami sediakan
+          </span>
+          <br />
+          Untuk Kamu di Brand-In Indonesia
+        </h3>
+        <div className='mt-10 grid gap-y-10 md:grid-cols-3 md:gap-x-10'>
+          <FeatureCard
+            name='Order dengan Mudah'
+            description='Anda hanya perlu menginstall aplikasi Brand-in dan mencari barang atau jasa yang anda butuhkan'
+            image={Feature1URL}
+          />
+          <FeatureCard
+            name='Cari Produk dan Jasa dengan Mudah'
+            description='Kami bekerjasama dengan berbagai mitra bisnis produk dan jasa'
+            image={Feature2URL}
+          />
+          <FeatureCard
+            name='Promosikan bisnis anda'
+            description='Anda bisa mempromosikan bisnis secara gratis melalui platform kami'
+            image={Feature3URL}
+          />
+        </div>
+      </section>
 
       {/* Partners */}
 
