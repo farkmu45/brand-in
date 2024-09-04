@@ -23,7 +23,7 @@ export default function NewsCard({
           aria-hidden='true'
         />
         <CardHeader>
-          <h2 className='text-2xl font-bold'>{title}</h2>
+          <h2 className='text-2xl font-semibold'>{title}</h2>
         </CardHeader>
         <CardContent>
           <p className='text-gray-600'>{description}</p>
