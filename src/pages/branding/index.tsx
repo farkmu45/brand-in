@@ -1,3 +1,5 @@
+import QAImageUrl1 from '@/assets/images/branding/qa-image-1.png'
+import QAImageUrl2 from '@/assets/images/branding/qa-image-2.png'
 import { Button } from '@/components/ui/button'
 
 export default function Branding() {
@@ -25,6 +27,49 @@ export default function Branding() {
             Konsultasi
           </a>
         </Button>
+      </section>
+
+      {/* QA Section */}
+      <section className='max-w-7xl mx-auto px-4 py-52'>
+        <div className='grid md:grid-cols-2 items-center gap-x-10 gap-y-10 md:gap-y-0'>
+          <img
+            src={QAImageUrl1}
+            alt='QA Image 1'
+            className='w-full object-contain'
+          />
+          <div>
+            <h2 className='text-3xl font-semibold'>
+              Apa itu Branding dengan Sosial Media?
+            </h2>
+            <p className='mt-5 leading-7'>
+              Branding dengan sosial media adalah strategi untuk memperkenalkan
+              dan membangun citra bisnis Anda melalui platform sosial media
+              seperti Instagram, Facebook, dan TikTok. Ini membantu dalam
+              menjangkau audiens yang lebih luas, membangun hubungan yang lebih
+              dekat dengan pelanggan, dan meningkatkan kepercayaan serta
+              kesadaran terhadap merek Anda.
+            </p>
+          </div>
+        </div>
+        <div className='grid md:grid-cols-2 items-center gap-x-10 gap-y-10 md:gap-y-0 mt-20'>
+          <img
+            src={QAImageUrl2}
+            alt='QA Image 2'
+            className='w-full object-contain md:order-1'
+          />
+          <div>
+            <h2 className='text-3xl font-semibold'>
+              Kenapa Penting untuk UMKM?
+            </h2>
+            <p className='mt-5 leading-7'>
+              Untuk UMKM, branding dengan sosial media adalah alat yang sangat
+              efektif dan efisien untuk memasarkan produk dan layanan tanpa
+              memerlukan biaya besar. Ini membantu UMKM bersaing dengan
+              perusahaan besar, menarik pelanggan baru, dan mempertahankan
+              pelanggan lama melalui konten yang menarik dan interaktif.
+            </p>
+          </div>
+        </div>
       </section>
     </>
   )
